@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://n9t9.github.io/lumenguard/sitemap.xml
+
+# Allow search engines to index all pages
+
+

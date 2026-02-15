@@ -1,8 +1,561 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for Lumen Guard - Learn how we protect your privacy and data.">
+    <title>Privacy Policy - Lumen Guard</title>
+    <link rel="icon" type="image/webp" href="images/app-icon.webp">
+    <link rel="apple-touch-icon" href="images/app-icon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #38bdf8;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo img {
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            display: inline-block;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .header-section h1 {
+            font-size: 3rem;
+            color: #38bdf8;
+            margin-bottom: 1rem;
+        }
+
+        .last-updated {
+            color: #94a3b8;
+            font-style: italic;
+        }
+
+        .content-section {
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            border-radius: 12px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: #38bdf8;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid rgba(56, 189, 248, 0.3);
+        }
+
+        h3 {
+            color: #e2e8f0;
+            font-size: 1.3rem;
+            margin: 2rem 0 1rem;
+        }
+
+        p {
+            color: #cbd5e1;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        ul, ol {
+            color: #cbd5e1;
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.8;
+        }
+
+        .highlight-box {
+            background: rgba(56, 189, 248, 0.1);
+            border-left: 4px solid #38bdf8;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .contact-box {
+            background: rgba(74, 222, 128, 0.1);
+            border: 1px solid rgba(74, 222, 128, 0.3);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .contact-box h3 {
+            color: #4ade80;
+            margin: 0 0 1rem 0;
+        }
+
+        .contact-box a {
+            color: #4ade80;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #38bdf8;
+        }
+
+        .copyright {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-section h1 {
+                font-size: 2rem;
+            }
+
+            .content-section {
+                padding: 2rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
 <body>
-    <h1>Lumen Guard Privacy Policy</h1>
-    <p>Lumen Guard uses the <strong>AccessibilityService API</strong> to create a system-wide overlay that dims your screen and filters blue light. This is the only purpose of this permission.</p>
-    <p><strong>Data Collection:</strong> We do not collect, store, or transmit any user data, screen content, or personal information. Your privacy is 100% protected.</p>
-    <p><strong>Ads:</strong> We use AppLovin for monetization. They may collect device identifiers to serve relevant ads.</p>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo"><img src="images/app-icon.webp" alt="Lumen Guard Icon">Lumen Guard</a>
+            <ul>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#download">Download</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="header-section">
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last Updated: February 16, 2026</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Our Privacy Commitment</h2>
+
+            <div class="highlight-box">
+                <p><strong>Your privacy matters to us.</strong> Lumen Guard is designed with privacy as a core principle. We minimize data collection and only use third-party advertising services to support the free version of the app. We are committed to transparency about what data is collected and how it's used.</p>
+            </div>
+
+            <p>This Privacy Policy explains how Lumen Guard ("we," "us," or "our") handles information when you use our mobile application (the "App"). By using Lumen Guard, you agree to the practices described in this policy.</p>
+
+            <h2>Information Collection Overview</h2>
+            <p>Lumen Guard operates on a privacy-respecting model:</p>
+            <ul>
+                <li><strong>By Lumen Guard directly:</strong> We do NOT collect, store, or transmit any personal information from our app</li>
+                <li><strong>By advertising partners:</strong> The free version of our app uses third-party advertising networks which may collect certain data as described below</li>
+                <li><strong>Premium version:</strong> Users who upgrade to Premium have NO ads and NO third-party data collection</li>
+            </ul>
+
+            <h2>Information We (Lumen Guard) DO NOT Collect</h2>
+            <p>Lumen Guard itself does not collect, store, transmit, or share any of the following:</p>
+            <ul>
+                <li>Personal identification information (name, email, phone number, etc.)</li>
+                <li>Usage statistics or analytics data</li>
+                <li>Location data</li>
+                <li>Screen content or screenshots</li>
+                <li>App usage patterns or behavior</li>
+                <li>Browsing history or other app usage</li>
+                <li>Any other personal or sensitive data</li>
+            </ul>
+            <p><strong>Note:</strong> While we don't collect this data, our advertising partner (AppLovin MAX) may collect certain information as described in the "Advertising and Third-Party Services" section below.</p>
+
+            <h2>Data Storage</h2>
+            <p>All app settings and preferences are stored locally on your device using Android's SharedPreferences system. This data includes:</p>
+            <ul>
+                <li>Dim and warmth level preferences</li>
+                <li>Custom scene configurations</li>
+                <li>Schedule settings</li>
+                <li>App configuration options (shake to toggle, auto-start, etc.)</li>
+            </ul>
+            <p>This data never leaves your device and is automatically deleted when you uninstall the app.</p>
+
+            <h2>Permissions We Require</h2>
+            <p>Lumen Guard requires the following Android permissions to function:</p>
+
+            <h3>1. SYSTEM_ALERT_WINDOW (Draw Over Other Apps)</h3>
+            <p>This permission is essential for Lumen Guard to display the dimming overlay on top of other applications. This is the core functionality that allows the app to dim your screen and apply the blue light filter system-wide.</p>
+
+            <h3>2. FOREGROUND_SERVICE & FOREGROUND_SERVICE_SPECIAL_USE</h3>
+            <p>These permissions allow Lumen Guard to run in the background and maintain the screen filter even when you switch to other apps. This ensures continuous eye protection without draining your battery.</p>
+
+            <h3>3. INTERNET (Free Version Only - For Ads)</h3>
+            <p>Required to display advertisements via AppLovin MAX in the free version. This permission enables the app to download ad content and communicate with advertising servers. Premium users have no ads and no advertising network communication.</p>
+
+            <p><strong>Important:</strong> Lumen Guard itself does not use these permissions to collect or transmit your personal data. The INTERNET permission is solely used by AppLovin MAX for advertising purposes in the free version.</p>
+
+            <h2>Advertising and Third-Party Services</h2>
+
+            <h3>Third-Party Advertising (Free Version Only)</h3>
+            <p>The free version of Lumen Guard displays advertisements through third-party advertising networks and mediation platforms. These advertising partners may collect and process certain information to provide personalized ads and measure ad performance.</p>
+
+            <h3>Information Collected by Advertising Networks</h3>
+            <p>When you use the free version of Lumen Guard, our advertising partners and their networks may automatically collect:</p>
+            <ul>
+                <li><strong>Device Information:</strong> Device type, model, operating system version, screen size, device language</li>
+                <li><strong>Advertising Identifiers:</strong> Google Advertising ID (GAID) or other advertising identifiers</li>
+                <li><strong>IP Address:</strong> Your device's IP address (used to determine approximate location at country/city level)</li>
+                <li><strong>App Information:</strong> App name, version, and package name</li>
+                <li><strong>Ad Interaction Data:</strong> Information about which ads you viewed, clicked, or interacted with</li>
+                <li><strong>Performance Data:</strong> Information about ad loading times and errors</li>
+            </ul>
+
+            <h3>Purpose of Data Collection</h3>
+            <p>Advertising networks use this information to:</p>
+            <ul>
+                <li>Deliver relevant advertisements to you</li>
+                <li>Measure ad performance and engagement</li>
+                <li>Detect and prevent fraud</li>
+                <li>Improve advertising services</li>
+                <li>Comply with legal obligations</li>
+            </ul>
+
+            <h3>Third-Party Advertising Partners</h3>
+            <p>Lumen Guard may work with one or more advertising networks and mediation platforms to display ads. These partners may also collect and process data according to their own privacy policies. Advertising partners may include (but are not limited to):</p>
+            <ul>
+                <li>Google AdMob</li>
+                <li>AppLovin MAX</li>
+                <li>Meta Audience Network</li>
+                <li>Unity Ads</li>
+                <li>Vungle</li>
+                <li>ironSource</li>
+                <li>AdColony</li>
+                <li>Other advertising networks</li>
+            </ul>
+
+            <p>The specific advertising partners we use may change over time. For current information about our advertising partners and their privacy practices, please review:</p>
+            <ul>
+                <li><a href="https://support.google.com/admob/answer/6128543" style="color: #38bdf8;" target="_blank" rel="noopener">Google AdMob Privacy Information</a></li>
+                <li><a href="https://www.applovin.com/privacy/" style="color: #38bdf8;" target="_blank" rel="noopener">AppLovin Privacy Policy</a></li>
+                <li><a href="https://www.facebook.com/privacy/policy/" style="color: #38bdf8;" target="_blank" rel="noopener">Meta Privacy Policy</a></li>
+                <li>Other partners' privacy policies (accessible through their respective websites)</li>
+            </ul>
+
+            <h3>Your Advertising Choices</h3>
+            <p>You have control over personalized advertising:</p>
+
+            <div class="tips-box" style="background: rgba(56, 189, 248, 0.1); border-left: 4px solid #38bdf8; padding: 1.5rem; margin: 1.5rem 0; border-radius: 4px;">
+                <p><strong>How to Opt-Out of Personalized Ads on Android:</strong></p>
+                <ol style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                    <li>Open your device <strong>Settings</strong></li>
+                    <li>Go to <strong>Privacy</strong> → <strong>Ads</strong> (or <strong>Google</strong> → <strong>Ads</strong>)</li>
+                    <li>Enable <strong>"Opt out of Ads Personalization"</strong></li>
+                    <li>You can also <strong>"Reset advertising ID"</strong> to clear your ad profile</li>
+                </ol>
+                <p style="margin-top: 0.5rem;"><em>Note: Opting out means you'll still see ads, but they won't be personalized based on your interests.</em></p>
+            </div>
+
+            <p>Additional opt-out options:</p>
+            <ul>
+                <li><a href="https://optout.aboutads.info/" style="color: #38bdf8;" target="_blank" rel="noopener">Digital Advertising Alliance Opt-Out</a></li>
+                <li><a href="https://www.youronlinechoices.com/" style="color: #38bdf8;" target="_blank" rel="noopener">European Interactive Digital Advertising Alliance</a></li>
+            </ul>
+
+            <h3>Remove Ads Entirely - Upgrade to Premium</h3>
+            <p>Want to eliminate all advertising and third-party data collection? Upgrade to <strong>Lumen Guard Premium</strong>. Premium users enjoy:</p>
+            <ul>
+                <li>✨ <strong>Zero ads</strong> - No advertisements whatsoever</li>
+                <li>✨ <strong>No third-party tracking</strong> - All advertising networks completely removed</li>
+                <li>✨ <strong>Complete privacy</strong> - No external data collection</li>
+                <li>✨ Plus all premium features (unlimited scenes, advanced scheduling, etc.)</li>
+            </ul>
+
+            <h2>Data Sharing and Disclosure</h2>
+            <p>We want to be completely transparent about when and how data is shared:</p>
+
+            <h3>Data Shared by Lumen Guard</h3>
+            <p><strong>We do NOT share, sell, rent, or trade any personal data.</strong> Lumen Guard itself does not have access to or control over the data collected by advertising networks.</p>
+
+            <h3>Data Shared by Advertising Networks</h3>
+            <p>Advertising networks may share data with:</p>
+            <ul>
+                <li><strong>Advertising Partners:</strong> Ad networks that bid to show you advertisements</li>
+                <li><strong>Analytics Providers:</strong> To measure ad performance and campaign effectiveness</li>
+                <li><strong>Fraud Prevention Services:</strong> To detect and prevent invalid ad traffic</li>
+                <li><strong>Service Providers:</strong> Companies that help operate the advertising platform</li>
+            </ul>
+
+            <h3>Circumstances for Data Disclosure</h3>
+            <p>Data may be disclosed in the following limited circumstances:</p>
+            <ul>
+                <li><strong>Legal Compliance:</strong> When required by law, court order, or government request</li>
+                <li><strong>Safety and Security:</strong> To protect the rights, property, or safety of users or the public</li>
+                <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or asset sale (users will be notified)</li>
+                <li><strong>With Consent:</strong> With your explicit consent for specific purposes</li>
+            </ul>
+
+            <h2>Internet Permission</h2>
+            <p>Lumen Guard requires the <strong>INTERNET</strong> permission to display advertisements in the free version. This permission allows advertising networks to:</p>
+            <ul>
+                <li>Download and display ad content</li>
+                <li>Communicate with advertising servers</li>
+                <li>Report ad performance metrics</li>
+            </ul>
+            <p><strong>Premium version note:</strong> Even though the permission remains (Android requirement), Premium users have ads completely disabled and no advertising network communication occurs.</p>
+
+            <h2>In-App Purchases</h2>
+            <p>Lumen Guard offers an optional premium upgrade through Google Play's in-app purchase system. When you make a purchase:</p>
+            <ul>
+                <li>The transaction is processed entirely by Google Play</li>
+                <li>We do not receive or store your payment information</li>
+                <li>Google Play's privacy policy governs the collection and use of payment data</li>
+                <li>We only receive a confirmation that the purchase was successful</li>
+            </ul>
+            <p>Please review <a href="https://policies.google.com/privacy" style="color: #38bdf8;">Google's Privacy Policy</a> for information on how they handle payment data.</p>
+
+            <h2>Children's Privacy (COPPA Compliance)</h2>
+            <p>Lumen Guard does not knowingly collect personal information from children under the age of 13. However, we take additional precautions regarding advertising:</p>
+            <ul>
+                <li>We do not knowingly direct ads to children under 13</li>
+                <li>AppLovin MAX is configured to comply with COPPA (Children's Online Privacy Protection Act)</li>
+                <li>If we learn that we have inadvertently collected information from a child under 13, we will take steps to delete such information</li>
+            </ul>
+            <p>Parents and guardians: If you believe your child has used Lumen Guard and provided information, please contact us immediately at <a href="mailto:privacy@beansnbrackets.com" style="color: #38bdf8;">privacy@beansnbrackets.com</a></p>
+            <p><strong>Recommendation:</strong> For children under 13, we strongly recommend using the Premium version (no ads, no tracking) with parental supervision.</p>
+
+            <h2>Data Security</h2>
+            <p>We take data security seriously:</p>
+            <ul>
+                <li><strong>Lumen Guard's Data:</strong> All your app settings are stored locally on your device using Android's secure SharedPreferences. This data never leaves your device.</li>
+                <li><strong>Advertising Data:</strong> Data collected by AppLovin MAX is transmitted over secure, encrypted connections (HTTPS)</li>
+                <li><strong>Third-Party Security:</strong> AppLovin and its partners maintain their own security measures. Please review their privacy policies for details</li>
+            </ul>
+            <p><strong>Premium Users:</strong> Enjoy the highest level of privacy with no third-party data transmission whatsoever.</p>
+
+            <h2>Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for legal reasons. If we make significant changes, we will:</p>
+            <ul>
+                <li>Update the "Last Updated" date at the top of this policy</li>
+                <li>Notify you through the app or via the Google Play Store</li>
+                <li>Provide you with an opportunity to review the changes</li>
+            </ul>
+            <p>Your continued use of Lumen Guard after any changes indicates your acceptance of the updated policy.</p>
+
+            <h2>Your Rights</h2>
+            <p>You have the following rights regarding your data:</p>
+
+            <h3>Regarding Lumen Guard Data</h3>
+            <ul>
+                <li>Delete all app data by uninstalling Lumen Guard</li>
+                <li>Clear app settings through your device's app settings</li>
+                <li>Reset to default settings within the app</li>
+            </ul>
+
+            <h3>Regarding Advertising Data</h3>
+            <ul>
+                <li><strong>Opt-out of personalized ads:</strong> Use your device's ad settings (see "Your Advertising Choices" section above)</li>
+                <li><strong>Reset advertising ID:</strong> Clear your ad profile through device settings</li>
+                <li><strong>Delete advertising data:</strong> Contact the advertising networks directly or use industry opt-out tools</li>
+                <li><strong>Request information:</strong> Contact advertising networks through their privacy portals for data access requests</li>
+            </ul>
+
+            <h3>GDPR Rights (EU Users)</h3>
+            <p>If you are in the European Economic Area (EEA), you have additional rights under GDPR:</p>
+            <ul>
+                <li><strong>Right to access:</strong> Request information about data collected about you</li>
+                <li><strong>Right to rectification:</strong> Request correction of inaccurate data</li>
+                <li><strong>Right to erasure:</strong> Request deletion of your data</li>
+                <li><strong>Right to restriction:</strong> Request limitation of data processing</li>
+                <li><strong>Right to data portability:</strong> Request your data in a portable format</li>
+                <li><strong>Right to object:</strong> Object to data processing for direct marketing</li>
+                <li><strong>Right to withdraw consent:</strong> Withdraw consent for data processing at any time</li>
+            </ul>
+            <p>To exercise these rights regarding advertising data, please contact the respective advertising networks through their privacy portals or use the industry opt-out tools linked above.</p>
+
+            <h3>CCPA Rights (California Users)</h3>
+            <p>If you are a California resident, you have rights under the California Consumer Privacy Act (CCPA):</p>
+            <ul>
+                <li><strong>Right to know:</strong> Request details about data collected, used, or shared</li>
+                <li><strong>Right to delete:</strong> Request deletion of personal information</li>
+                <li><strong>Right to opt-out:</strong> Opt-out of the "sale" of personal information (ad targeting)</li>
+                <li><strong>Right to non-discrimination:</strong> Not be discriminated against for exercising your rights</li>
+            </ul>
+            <p>To opt-out of targeted advertising (CCPA "sale"), use your device's ad personalization settings.</p>
+
+            <h2>Compliance</h2>
+            <p>Lumen Guard and its advertising partners comply with applicable privacy laws and regulations, including:</p>
+            <ul>
+                <li><strong>Google Play Store policies</strong> - Full compliance with Google's Developer Program Policies</li>
+                <li><strong>GDPR (General Data Protection Regulation)</strong> - EU data protection law</li>
+                <li><strong>CCPA (California Consumer Privacy Act)</strong> - California privacy law</li>
+                <li><strong>COPPA (Children's Online Privacy Protection Act)</strong> - US children's privacy law</li>
+                <li><strong>ePrivacy Directive</strong> - EU electronic communications privacy</li>
+                <li><strong>LGPD (Lei Geral de Proteção de Dados)</strong> - Brazilian data protection law</li>
+            </ul>
+
+            <h3>Legal Basis for Processing (GDPR)</h3>
+            <p>For users in the EU/EEA, our legal basis for data processing is:</p>
+            <ul>
+                <li><strong>Legitimate Interest:</strong> To provide a free, ad-supported version of the app</li>
+                <li><strong>Consent:</strong> By using the free version, you consent to AppLovin MAX's data processing for advertising</li>
+                <li><strong>Contract:</strong> To fulfill our obligation to provide the app's core functionality</li>
+            </ul>
+
+            <h3>Data Retention</h3>
+            <ul>
+                <li><strong>Lumen Guard:</strong> Settings stored locally are deleted when you uninstall the app</li>
+                <li><strong>Advertising Networks:</strong> Data retention is governed by each network's policies (typically 13-24 months)</li>
+                <li><strong>Advertising Partners:</strong> Each partner has their own retention policies - please review their privacy policies</li>
+            </ul>
+
+            <h3>International Data Transfers</h3>
+            <p>Advertising networks may transfer data to servers located outside your country of residence, including to the United States. These transfers are protected by:</p>
+            <ul>
+                <li>Standard Contractual Clauses (SCCs) approved by the European Commission</li>
+                <li>Adequacy decisions</li>
+                <li>Other legal mechanisms as required by applicable law</li>
+            </ul>
+
+            <div class="contact-box">
+                <h3>Questions or Concerns?</h3>
+                <p>If you have any questions about this Privacy Policy or Lumen Guard's privacy practices, please contact us:</p>
+                <p><strong>Privacy Inquiries:</strong><br>
+                <a href="mailto:privacy@beansnbrackets.com">privacy@beansnbrackets.com</a></p>
+                <p><strong>General Support:</strong><br>
+                <a href="mailto:support@beansnbrackets.com">support@beansnbrackets.com</a></p>
+
+                <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(74, 222, 128, 0.3);">
+                    <p><strong>For Advertising-Related Privacy Requests:</strong></p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">
+                        <strong>Common Advertising Network Privacy Portals:</strong><br>
+                        • Google AdMob: <a href="https://support.google.com/admob/answer/6128543" style="color: #4ade80;" target="_blank" rel="noopener">AdMob Privacy</a><br>
+                        • AppLovin: <a href="https://www.applovin.com/privacy/" style="color: #4ade80;" target="_blank" rel="noopener">AppLovin Privacy</a><br>
+                        • Meta: <a href="https://www.facebook.com/privacy/policy/" style="color: #4ade80;" target="_blank" rel="noopener">Meta Privacy</a><br>
+                        • Unity Ads: <a href="https://unity.com/legal/privacy-policy" style="color: #4ade80;" target="_blank" rel="noopener">Unity Privacy</a><br>
+                        <br>
+                        For data access/deletion requests, visit the specific network's privacy portal or use industry opt-out tools mentioned in this policy.
+                    </p>
+                </div>
+
+                <p style="margin-top: 1.5rem; color: #94a3b8; font-size: 0.9rem;">
+                    Beans & Brackets<br>
+                    Lumen Guard Development Team
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="support.html">Support</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="mailto:beansnbrackets@gmail.com">Contact</a>
+        </div>
+        <div class="copyright">
+            © 2026 Beans &amp; Brackets. All rights reserved.
+        </div>
+    </footer>
 </body>
 </html>
+

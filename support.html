@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Support and FAQ for Lumen Guard - Get help with installation, troubleshooting, and features.">
+    <title>Support - Lumen Guard</title>
+    <link rel="icon" type="image/webp" href="images/app-icon.webp">
+    <link rel="apple-touch-icon" href="images/app-icon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #38bdf8;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo img {
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            display: inline-block;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .header-section h1 {
+            font-size: 3rem;
+            color: #38bdf8;
+            margin-bottom: 1rem;
+        }
+
+        .header-section p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #38bdf8;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid rgba(56, 189, 248, 0.3);
+        }
+
+        .faq-item {
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .faq-item:hover {
+            border-color: #38bdf8;
+            box-shadow: 0 5px 20px rgba(56, 189, 248, 0.1);
+        }
+
+        .faq-question {
+            font-size: 1.3rem;
+            color: #e2e8f0;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .faq-question::before {
+            content: "❓";
+            font-size: 1.2rem;
+        }
+
+        .faq-answer {
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+        .faq-answer p {
+            margin-bottom: 1rem;
+        }
+
+        .faq-answer ul, .faq-answer ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .faq-answer li {
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-answer code {
+            background: rgba(56, 189, 248, 0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #38bdf8;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(129, 140, 248, 0.1) 100%);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 16px;
+            padding: 3rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .contact-section h2 {
+            color: #38bdf8;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-card {
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-card h3 {
+            color: #e2e8f0;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Tips Box */
+        .tips-box {
+            background: rgba(74, 222, 128, 0.1);
+            border-left: 4px solid #4ade80;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .tips-box strong {
+            color: #4ade80;
+        }
+
+        .warning-box {
+            background: rgba(251, 191, 36, 0.1);
+            border-left: 4px solid #fbbf24;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .warning-box strong {
+            color: #fbbf24;
+        }
+
+        /* Footer */
+        footer {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #38bdf8;
+        }
+
+        .copyright {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-section h1 {
+                font-size: 2rem;
+            }
+
+            .faq-item {
+                padding: 1.5rem;
+            }
+
+            .contact-section {
+                padding: 2rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo"><img src="images/app-icon.webp" alt="Lumen Guard Icon">Lumen Guard</a>
+            <ul>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#download">Download</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="header-section">
+            <h1>Support & FAQ</h1>
+            <p>Find answers to common questions and get help with Lumen Guard</p>
+        </div>
+
+        <!-- Getting Started -->
+        <section class="faq-section">
+            <h2 class="section-title">Getting Started</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I install Lumen Guard?</div>
+                <div class="faq-answer">
+                    <p>Installing Lumen Guard is simple:</p>
+                    <ol>
+                        <li>Download Lumen Guard from the Google Play Store</li>
+                        <li>Open the app after installation</li>
+                        <li>Grant the "Draw over other apps" permission when prompted</li>
+                        <li>Start adjusting your screen dimming and warmth levels!</li>
+                    </ol>
+                    <div class="tips-box">
+                        <strong>💡 Tip:</strong> The overlay permission is essential for Lumen Guard to work. Without it, the app cannot display the dimming filter over other applications.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What permissions does Lumen Guard need and why?</div>
+                <div class="faq-answer">
+                    <p>Lumen Guard requires the following permissions:</p>
+                    <ul>
+                        <li><strong>Draw over other apps (SYSTEM_ALERT_WINDOW)</strong> - Required to display the dimming overlay on your screen</li>
+                        <li><strong>Foreground Service</strong> - Allows the app to keep running in the background to maintain your settings</li>
+                    </ul>
+                    <p>These permissions are used exclusively for the app's core functionality. We do not collect or transmit any data. See our <a href="privacy.html" style="color: #38bdf8;">Privacy Policy</a> for more details.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I enable the screen filter?</div>
+                <div class="faq-answer">
+                    <p>To enable the screen filter:</p>
+                    <ol>
+                        <li>Open Lumen Guard</li>
+                        <li>On the Home screen, toggle the power button at the top</li>
+                        <li>Adjust the dim and warmth sliders to your preference</li>
+                        <li>The filter will be applied system-wide</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features & Usage -->
+        <section class="faq-section">
+            <h2 class="section-title">Features & Usage</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">What are Custom Scenes and how do I use them?</div>
+                <div class="faq-answer">
+                    <p>Custom Scenes allow you to save your favorite dim and warmth combinations for quick access. For example, you can create:</p>
+                    <ul>
+                        <li><strong>Reading Mode</strong> - Medium dim, high warmth</li>
+                        <li><strong>Movie Mode</strong> - Low dim, low warmth</li>
+                        <li><strong>Bedtime Mode</strong> - High dim, maximum warmth</li>
+                    </ul>
+                    <p>To create a scene:</p>
+                    <ol>
+                        <li>Go to the Scenes tab</li>
+                        <li>Tap "Create New Scene" (Premium feature)</li>
+                        <li>Adjust dim and warmth levels</li>
+                        <li>Give your scene a name and save</li>
+                    </ol>
+                    <div class="tips-box">
+                        <strong>💡 Tip:</strong> Custom Scenes are a Premium feature. Free users have access to default scenes.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How does Smart Scheduling work?</div>
+                <div class="faq-answer">
+                    <p>Smart Scheduling automatically enables the screen filter at specific times. Perfect for evening eye protection!</p>
+                    <p>To set up a schedule:</p>
+                    <ol>
+                        <li>Go to the Schedule tab</li>
+                        <li>Toggle "Enable Schedule"</li>
+                        <li>Set your start time (e.g., 8:00 PM)</li>
+                        <li>Set your end time (e.g., 7:00 AM)</li>
+                        <li>Lumen Guard will automatically activate during these hours</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What is "Shake to Toggle"?</div>
+                <div class="faq-answer">
+                    <p>"Shake to Toggle" is a quick gesture control that lets you enable or disable the screen filter by shaking your device.</p>
+                    <p>To enable it:</p>
+                    <ol>
+                        <li>Go to Settings</li>
+                        <li>Toggle "Shake to Toggle" on</li>
+                        <li>Give your phone a firm shake to toggle the filter on/off</li>
+                    </ol>
+                    <div class="tips-box">
+                        <strong>💡 Tip:</strong> This is great when you need to quickly disable the filter to view colors accurately, then shake again to re-enable it.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What's the difference between Dim and Warmth?</div>
+                <div class="faq-answer">
+                    <ul>
+                        <li><strong>Dim Level</strong> - Controls the overall darkness of the screen overlay. Higher values make your screen darker, reducing brightness beyond system limits.</li>
+                        <li><strong>Warmth Level</strong> - Applies a warm (orange/amber) tint to reduce blue light emission. Higher values provide more blue light filtering.</li>
+                    </ul>
+                    <p>For best eye protection, especially before bedtime, use both a moderate dim level and high warmth level.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Troubleshooting -->
+        <section class="faq-section">
+            <h2 class="section-title">Troubleshooting</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">The filter isn't working. What should I do?</div>
+                <div class="faq-answer">
+                    <p>If the filter isn't displaying, try these steps:</p>
+                    <ol>
+                        <li><strong>Check Permissions</strong> - Go to Settings → Apps → Lumen Guard → Permissions and ensure "Display over other apps" is enabled</li>
+                        <li><strong>Restart the App</strong> - Close and reopen Lumen Guard</li>
+                        <li><strong>Check if Enabled</strong> - Make sure the power toggle on the Home screen is ON</li>
+                        <li><strong>Check Battery Settings</strong> - Some devices aggressively kill background apps. Add Lumen Guard to your battery optimization exceptions</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">The filter disappears when I switch apps</div>
+                <div class="faq-answer">
+                    <p>This usually happens due to battery optimization settings:</p>
+                    <ol>
+                        <li>Go to your device Settings</li>
+                        <li>Navigate to Battery or Battery Optimization</li>
+                        <li>Find Lumen Guard and set it to "Don't optimize" or "Unrestricted"</li>
+                        <li>Enable "Auto-Start on Boot" in Lumen Guard settings</li>
+                    </ol>
+                    <div class="warning-box">
+                        <strong>⚠️ Note:</strong> Different manufacturers have different battery optimization menus. Search for "battery optimization" in your device settings.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I exclude certain apps from the filter?</div>
+                <div class="faq-answer">
+                    <p>Currently, Lumen Guard applies the filter system-wide. If you need to temporarily disable it for specific tasks:</p>
+                    <ul>
+                        <li>Use the quick toggle on the Home screen</li>
+                        <li>Enable "Shake to Toggle" for quick gesture control</li>
+                        <li>Pull down your notification shade and tap the Lumen Guard notification to quickly toggle</li>
+                    </ul>
+                    <div class="tips-box">
+                        <strong>💡 Future Feature:</strong> Per-app filtering is planned for a future update!
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">The app is affecting my battery life</div>
+                <div class="faq-answer">
+                    <p>Lumen Guard is designed to be lightweight and battery-efficient. However, if you notice increased battery drain:</p>
+                    <ul>
+                        <li>Make sure you're running the latest version from Google Play</li>
+                        <li>Reduce the frequency of shake detection if you don't use that feature</li>
+                        <li>The overlay itself uses minimal resources (less than 1% typically)</li>
+                    </ul>
+                    <p>If battery drain persists, please contact support with your device model and Android version.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I uninstall Lumen Guard?</div>
+                <div class="faq-answer">
+                    <p>To uninstall Lumen Guard:</p>
+                    <ol>
+                        <li>First, disable the screen filter within the app</li>
+                        <li>Go to your device Settings → Apps</li>
+                        <li>Find Lumen Guard and tap "Uninstall"</li>
+                    </ol>
+                    <p>All your settings and data will be automatically removed when you uninstall.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Premium -->
+        <section class="faq-section">
+            <h2 class="section-title">Premium Features</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">What do I get with Premium?</div>
+                <div class="faq-answer">
+                    <p>Premium unlocks the following features:</p>
+                    <ul>
+                        <li>✨ Unlimited Custom Scenes - Save as many configurations as you want</li>
+                        <li>✨ Advanced Scheduling Options - Multiple schedules, weekday-specific settings</li>
+                        <li>✨ Priority Email Support - Get faster responses to your questions</li>
+                        <li>✨ Early Access to New Features - Try new features before they're released to everyone</li>
+                        <li>✨ Support Development - Help us continue improving Lumen Guard</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I upgrade to Premium?</div>
+                <div class="faq-answer">
+                    <p>To upgrade to Premium:</p>
+                    <ol>
+                        <li>Open Lumen Guard</li>
+                        <li>Tap the Settings tab</li>
+                        <li>Tap "Upgrade to Premium"</li>
+                        <li>Complete the purchase through Google Play</li>
+                    </ol>
+                    <p>Your premium features will be activated immediately after purchase.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I get a refund?</div>
+                <div class="faq-answer">
+                    <p>Refunds are handled through Google Play Store. You can request a refund within 48 hours of purchase:</p>
+                    <ol>
+                        <li>Open the Google Play Store app</li>
+                        <li>Tap Menu → Account → Purchase history</li>
+                        <li>Find Lumen Guard Premium</li>
+                        <li>Tap "Request a refund"</li>
+                    </ol>
+                    <p>For refund requests after 48 hours, please contact us at <a href="mailto:beansnbrackets@gmail.com" style="color: #38bdf8;">beansnbrackets@gmail.com</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <h2>Still Need Help?</h2>
+            <p style="color: #cbd5e1; margin-bottom: 2rem;">We're here to help! Reach out to us through any of these channels:</p>
+
+            <div class="contact-methods">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email Support</h3>
+                    <p style="color: #94a3b8; margin-bottom: 0.5rem;">Get help via email</p>
+                    <a href="mailto:support@beansnbrackets.com">support@beansnbrackets.com</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">⭐</div>
+                    <h3>Rate Us</h3>
+                    <p style="color: #94a3b8; margin-bottom: 0.5rem;">Love Lumen Guard?</p>
+                    <a href="https://play.google.com/store/apps">Leave a Review</a>
+                </div>
+            </div>
+
+            <p style="color: #94a3b8; margin-top: 2rem; font-size: 0.9rem;">
+                Response time: Usually within 24-48 hours<br>
+                Premium users receive priority support
+            </p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="support.html">Support</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="mailto:beansnbrackets@gmail.com">Contact</a>
+        </div>
+        <div class="copyright">
+            © 2026 Beans &amp; Brackets. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
+
+

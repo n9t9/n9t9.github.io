@@ -1,0 +1,21 @@
+# CNAME Configuration for Custom Domain
+#
+# Uncomment and update the line below if you want to use a custom domain
+# Remove the # symbol and replace with your actual domain
+#
+# lumenguard.com
+#
+# Or use a subdomain:
+# www.lumenguard.com
+#
+# Then configure your DNS:
+# - Type: A Record
+# - Host: @ (or www)
+# - Points to:
+#   185.199.108.153
+#   185.199.109.153
+#   185.199.110.153
+#   185.199.111.153
+#
+# For more info: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site
+
