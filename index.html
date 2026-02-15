@@ -17,10 +17,12 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             color: #f8fafc;
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         /* Header */
@@ -136,21 +138,23 @@
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
+            font-size: 1rem;
         }
 
         .btn-primary {
             background: #38bdf8;
             color: #0f172a;
+            box-shadow: 0 4px 14px rgba(56, 189, 248, 0.3);
         }
 
         .btn-primary:hover {
             background: #0ea5e9;
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
+            box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
         }
 
         .btn-secondary {
@@ -189,13 +193,19 @@
             border: 1px solid rgba(56, 189, 248, 0.2);
             border-radius: 12px;
             padding: 2rem;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
         }
 
         .feature-card:hover {
             transform: translateY(-5px);
             border-color: #38bdf8;
             box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
+            background: rgba(30, 41, 59, 0.95);
+        }
+
+        .feature-card:hover .feature-icon {
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.3) 0%, rgba(129, 140, 248, 0.3) 100%);
+            transform: scale(1.05);
         }
 
         .feature-icon {
@@ -483,7 +493,7 @@
 
     <!-- Premium Features -->
     <section class="premium-section">
-        <h2>✨ Premium Features</h2>
+        <h2>Premium Features</h2>
         <p class="premium-badge">Unlock the full potential of Lumen Guard</p>
         <div class="premium-features">
             <div class="premium-item">
