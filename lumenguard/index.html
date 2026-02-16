@@ -7,404 +7,16 @@
     <meta name="keywords" content="screen dimmer, blue light filter, eye protection, android app, brightness control, lumen guard">
     <meta name="author" content="Beans & Brackets">
     <title>Lumen Guard - Professional Eye Protection for Android</title>
-    <link rel="icon" type="image/webp" href="images/app-icon.webp">
-    <link rel="apple-touch-icon" href="images/app-icon.png">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: #f8fafc;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        /* Header */
-        header {
-            background: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid rgba(56, 189, 248, 0.2);
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #38bdf8;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .logo img {
-            width: 28px;
-            height: 28px;
-            border-radius: 6px;
-            display: inline-block;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        nav a {
-            color: #94a3b8;
-            text-decoration: none;
-            transition: color 0.3s;
-            font-weight: 500;
-        }
-
-        nav a:hover {
-            color: #38bdf8;
-        }
-
-        /* Hero Section */
-        .hero {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 6rem 2rem;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            color: #38bdf8;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-title {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.75rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .hero-title-icon {
-            width: 56px;
-            height: 56px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.15);
-            flex-shrink: 0;
-        }
-
-        .hero .tagline {
-            font-size: 1.5rem;
-            color: #cbd5e1;
-            margin-bottom: 2rem;
-        }
-
-        .hero .description {
-            font-size: 1.1rem;
-            color: #94a3b8;
-            max-width: 700px;
-            margin: 0 auto 3rem;
-            line-height: 1.8;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 1rem;
-        }
-
-        .btn-primary {
-            background: #38bdf8;
-            color: #0f172a;
-            box-shadow: 0 4px 14px rgba(56, 189, 248, 0.3);
-        }
-
-        .btn-primary:hover {
-            background: #0ea5e9;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
-        }
-
-        .btn-secondary {
-            background: rgba(56, 189, 248, 0.1);
-            color: #38bdf8;
-            border: 1px solid #38bdf8;
-        }
-
-        .btn-secondary:hover {
-            background: rgba(56, 189, 248, 0.2);
-            transform: translateY(-2px);
-        }
-
-        /* Features Section */
-        .features {
-            max-width: 1200px;
-            margin: 4rem auto;
-            padding: 4rem 2rem;
-        }
-
-        .features h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #38bdf8;
-            margin-bottom: 3rem;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-card {
-            background: rgba(30, 41, 59, 0.8);
-            border: 1px solid rgba(56, 189, 248, 0.2);
-            border-radius: 12px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            border-color: #38bdf8;
-            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
-            background: rgba(30, 41, 59, 0.95);
-        }
-
-        .feature-card:hover .feature-icon {
-            background: linear-gradient(135deg, rgba(56, 189, 248, 0.3) 0%, rgba(129, 140, 248, 0.3) 100%);
-            transform: scale(1.05);
-        }
-
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .feature-card h3 {
-            color: #e2e8f0;
-            margin-bottom: 0.5rem;
-            font-size: 1.3rem;
-        }
-
-        .feature-card p {
-            color: #94a3b8;
-            line-height: 1.6;
-        }
-
-        /* Premium Features */
-        .premium-section {
-            max-width: 1200px;
-            margin: 4rem auto;
-            padding: 4rem 2rem;
-            background: linear-gradient(135deg, rgba(250, 204, 21, 0.1) 0%, rgba(234, 179, 8, 0.05) 100%);
-            border-radius: 16px;
-            border: 1px solid rgba(250, 204, 21, 0.3);
-        }
-
-        .premium-section h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #facc15;
-            margin-bottom: 1rem;
-        }
-
-        .premium-badge {
-            text-align: center;
-            color: #cbd5e1;
-            margin-bottom: 3rem;
-            font-size: 1.1rem;
-        }
-
-        .premium-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .premium-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            background: rgba(30, 41, 59, 0.6);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 1px solid rgba(250, 204, 21, 0.2);
-        }
-
-        .premium-item::before {
-            content: "✨";
-            font-size: 1.5rem;
-        }
-
-        /* Screenshots */
-        .screenshots {
-            max-width: 1200px;
-            margin: 4rem auto;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-
-        .screenshots h2 {
-            font-size: 2.5rem;
-            color: #38bdf8;
-            margin-bottom: 3rem;
-        }
-
-        .screenshot-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .screenshot-placeholder {
-            background: rgba(30, 41, 59, 0.8);
-            border: 2px dashed rgba(56, 189, 248, 0.3);
-            border-radius: 12px;
-            padding: 4rem 2rem;
-            color: #64748b;
-            font-style: italic;
-        }
-
-        /* Download Section */
-        .download-section {
-            max-width: 800px;
-            margin: 4rem auto;
-            padding: 4rem 2rem;
-            text-align: center;
-            background: rgba(30, 41, 59, 0.6);
-            border-radius: 16px;
-            border: 1px solid rgba(56, 189, 248, 0.2);
-        }
-
-        .download-section h2 {
-            font-size: 2.5rem;
-            color: #38bdf8;
-            margin-bottom: 1rem;
-        }
-
-        .download-section p {
-            color: #94a3b8;
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-        }
-
-        .badge-placeholder {
-            display: inline-block;
-            background: rgba(56, 189, 248, 0.1);
-            border: 1px solid #38bdf8;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            color: #38bdf8;
-            font-weight: 600;
-        }
-
-        /* Footer */
-        footer {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-            text-align: center;
-            border-top: 1px solid rgba(56, 189, 248, 0.2);
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h3 {
-            color: #38bdf8;
-            margin-bottom: 1rem;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section a {
-            color: #94a3b8;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.5rem;
-            transition: color 0.3s;
-        }
-
-        .footer-section a:hover {
-            color: #38bdf8;
-        }
-
-        .copyright {
-            color: #64748b;
-            font-size: 0.9rem;
-            padding-top: 2rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero .tagline {
-                font-size: 1.2rem;
-            }
-
-            nav ul {
-                gap: 1rem;
-                font-size: 0.9rem;
-            }
-
-            .features h2,
-            .premium-section h2,
-            .screenshots h2,
-            .download-section h2 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    <link rel="icon" type="image/webp" href="./images/app-icon.webp">
+    <link rel="apple-touch-icon" href="./images/app-icon.png">
+    <link rel="stylesheet" href="./css/lumenguard.css">
 </head>
 <body>
     <!-- Header -->
     <header>
         <nav>
             <div class="logo">
-                <img src="images/app-icon.webp" alt="Lumen Guard Icon">
+                <img src="./images/app-icon.webp" alt="Lumen Guard Icon">
                 Lumen Guard
             </div>
             <ul>
@@ -419,7 +31,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-title">
-            <img src="images/app-icon.webp" alt="" class="hero-title-icon" aria-hidden="true">
+            <img src="./images/app-icon.webp" alt="" class="hero-title-icon" aria-hidden="true">
             <h1>Lumen Guard</h1>
         </div>
         <p class="tagline">Professional Eye Protection for Android</p>
@@ -429,10 +41,10 @@
         </p>
         <div class="cta-buttons">
             <a href="#download" class="btn btn-primary">
-                📱 Get on Google Play
+                Download App
             </a>
             <a href="support.html" class="btn btn-secondary">
-                📚 Learn More
+                Learn More
             </a>
         </div>
     </section>
@@ -442,49 +54,95 @@
         <h2>Powerful Features</h2>
         <div class="features-grid">
             <div class="feature-card">
-                <div class="feature-icon">🌙</div>
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </div>
                 <h3>Adjustable Screen Dimming</h3>
                 <p>Reduce screen brightness beyond system limits with precise control. Perfect for late-night reading or dark environments.</p>
             </div>
 
             <div class="feature-card">
-                <div class="feature-icon">🔆</div>
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </div>
                 <h3>Blue Light Filter</h3>
                 <p>Apply customizable warmth levels to reduce blue light emission and minimize eye strain during prolonged use.</p>
             </div>
 
             <div class="feature-card">
-                <div class="feature-icon">🎨</div>
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path>
+                        <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
+                    </svg>
+                </div>
                 <h3>Custom Scenes</h3>
                 <p>Save your favorite dim and warmth combinations for quick access. Switch between reading, movie, and bedtime modes instantly.</p>
             </div>
 
             <div class="feature-card">
-                <div class="feature-icon">⏰</div>
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
                 <h3>Smart Scheduling</h3>
                 <p>Automate filter activation with time-based schedules. Set your preferred times and let Lumen Guard handle the rest.</p>
             </div>
 
             <div class="feature-card">
-                <div class="feature-icon">📱</div>
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                        <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                    </svg>
+                </div>
                 <h3>Shake to Toggle</h3>
                 <p>Quickly enable or disable the screen filter by shaking your device. Fast and convenient control at your fingertips.</p>
             </div>
 
             <div class="feature-card">
-                <div class="feature-icon">🚀</div>
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="23 4 23 10 17 10"></polyline>
+                        <polyline points="1 20 1 14 7 14"></polyline>
+                        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                    </svg>
+                </div>
                 <h3>Auto-Start on Boot</h3>
                 <p>Automatically launch Lumen Guard when your device starts. Your eye protection never takes a break.</p>
             </div>
 
             <div class="feature-card">
-                <div class="feature-icon">🎯</div>
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                    </svg>
+                </div>
                 <h3>Lightweight & Fast</h3>
                 <p>Minimal battery impact with optimized performance. Efficient overlay technology ensures smooth operation.</p>
             </div>
 
             <div class="feature-card">
-                <div class="feature-icon">🔒</div>
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                </div>
                 <h3>Privacy First</h3>
                 <p>No data collection, no ads, no tracking. Your privacy is our priority. All settings stored locally on your device.</p>
             </div>
@@ -497,15 +155,38 @@
         <p class="premium-badge">Unlock the full potential of Lumen Guard</p>
         <div class="premium-features">
             <div class="premium-item">
+                <div class="premium-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                </div>
                 <span>Unlimited Custom Scenes</span>
             </div>
             <div class="premium-item">
+                <div class="premium-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                </div>
                 <span>Advanced Scheduling Options</span>
             </div>
             <div class="premium-item">
+                <div class="premium-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                </div>
                 <span>Priority Support</span>
             </div>
             <div class="premium-item">
+                <div class="premium-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                </div>
                 <span>Future Premium Features</span>
             </div>
         </div>
@@ -532,15 +213,16 @@
 
     <!-- Download Section -->
     <section class="download-section" id="download">
-        <h2>Get Lumen Guard Today</h2>
-        <p>Coming soon to the Google Play Store</p>
-        <div style="opacity: 0.6; pointer-events: none;">
-            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-                 alt="Get it on Google Play"
-                 style="height: 80px; border-radius: 8px;">
+        <h2>Get Lumen Guard</h2>
+        <p>Be the first to know when Lumen Guard launches on the Google Play Store</p>
+        <div style="margin-top: 2rem;">
+            <a href="mailto:beansnbrackets@gmail.com?subject=Lumen%20Guard%20Waiting%20List&body=I%20am%20interested"
+               class="btn btn-primary">
+                Join Waiting List
+            </a>
         </div>
         <p style="margin-top: 2rem; font-size: 1rem; color: #38bdf8; font-weight: 600;">
-            Currently in pilot phase - Stay tuned!
+            Currently in pilot phase
         </p>
         <p style="margin-top: 1rem; font-size: 0.9rem; color: #64748b;">
             Requires Android 6.0 or higher<br>

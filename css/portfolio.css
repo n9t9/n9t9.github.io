@@ -1,0 +1,150 @@
+/* Portfolio Page Specific Styles */
+
+.intro {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.intro h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #cbd5e1;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #94a3b8;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Apps Grid */
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.app-card {
+    background: rgba(30, 41, 59, 0.8);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.app-card:hover {
+    transform: translateY(-8px);
+    border-color: #38bdf8;
+    box-shadow: 0 12px 40px rgba(56, 189, 248, 0.15);
+    background: rgba(30, 41, 59, 0.95);
+}
+
+.app-card:hover .app-icon {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(56, 189, 248, 0.2);
+}
+
+.app-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.app-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.1);
+    transition: all 0.3s ease;
+}
+
+.app-title-section h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    margin-bottom: 0.25rem;
+    letter-spacing: -0.01em;
+}
+
+.app-category {
+    color: #38bdf8;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.app-description {
+    color: #94a3b8;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.app-status {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    border-radius: 6px;
+    color: #38bdf8;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.app-features {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.app-features ul {
+    list-style: none;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.app-features li {
+    color: #cbd5e1;
+    font-size: 0.9rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.app-features li::before {
+    content: "•";
+    color: #38bdf8;
+    font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .intro h2 {
+        font-size: 2rem;
+    }
+
+    .intro p {
+        font-size: 1rem;
+    }
+
+    .app-icon {
+        width: 56px;
+        height: 56px;
+    }
+
+    .app-title-section h3 {
+        font-size: 1.3rem;
+    }
+}
+

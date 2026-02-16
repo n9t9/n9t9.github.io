@@ -1,0 +1,142 @@
+/* Import Modern Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #f8fafc;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+header {
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Logo Styles */
+.dev-logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(148, 163, 184, 0.1);
+}
+
+.dev-info h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #e2e8f0;
+    margin-bottom: 0.25rem;
+    letter-spacing: -0.02em;
+}
+
+.dev-info p {
+    color: #94a3b8;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    width: 100%;
+}
+
+/* Footer Styles */
+footer {
+    background: rgba(15, 23, 42, 0.95);
+    padding: 2rem 0;
+    border-top: 1px solid rgba(148, 163, 184, 0.2);
+    text-align: center;
+}
+
+footer p {
+    color: #64748b;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+footer a {
+    color: #38bdf8;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+footer a:hover {
+    color: #0ea5e9;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    letter-spacing: -0.01em;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+    color: #0f172a;
+    box-shadow: 0 4px 14px rgba(56, 189, 248, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+}
+
+.btn-secondary {
+    background: rgba(56, 189, 248, 0.1);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.btn-secondary:hover {
+    background: rgba(56, 189, 248, 0.2);
+    border-color: rgba(56, 189, 248, 0.5);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    .dev-info h1 {
+        font-size: 1.4rem;
+    }
+
+    .dev-info p {
+        font-size: 0.9rem;
+    }
+}
+
