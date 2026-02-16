@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terms of Service for Lumen Guard - Terms and conditions for using our application.">
+    <title>Terms of Service - Lumen Guard</title>
+    <link rel="icon" type="image/webp" href="./images/app-icon.webp">
+    <link rel="apple-touch-icon" href="./images/app-icon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #f8fafc;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Header */
+        header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #38bdf8;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo img {
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            display: inline-block;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .header-section h1 {
+            font-size: 3rem;
+            color: #38bdf8;
+            margin-bottom: 1rem;
+        }
+
+        .last-updated {
+            color: #94a3b8;
+            font-style: italic;
+        }
+
+        .content-section {
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            border-radius: 12px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: #38bdf8;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid rgba(56, 189, 248, 0.3);
+        }
+
+        h3 {
+            color: #e2e8f0;
+            font-size: 1.3rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+
+        p {
+            color: #cbd5e1;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        ul, ol {
+            color: #cbd5e1;
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.8;
+        }
+
+        .highlight-box {
+            background: rgba(56, 189, 248, 0.1);
+            border-left: 4px solid #38bdf8;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .contact-box {
+            background: rgba(74, 222, 128, 0.1);
+            border: 1px solid rgba(74, 222, 128, 0.3);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .contact-box h3 {
+            color: #4ade80;
+            margin: 0 0 1rem 0;
+        }
+
+        .contact-box a {
+            color: #4ade80;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #38bdf8;
+        }
+
+        .copyright {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-section h1 {
+                font-size: 2rem;
+            }
+
+            .content-section {
+                padding: 2rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo"><img src="./images/app-icon.webp" alt="Lumen Guard Icon">Lumen Guard</a>
+            <ul>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#download">Download</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="header-section">
+            <h1>Terms of Service</h1>
+            <p class="last-updated">Last Updated: February 16, 2026</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Agreement to Terms</h2>
+            <p>
+                By accessing or using Lumen Guard ("the App"), developed by Beans & Brackets ("we," "us," or "our"),
+                you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do
+                not use our application.
+            </p>
+            <p>
+                These Terms constitute a legally binding agreement between you and Beans & Brackets. We reserve the right
+                to modify these Terms at any time, and your continued use of the App after changes are posted
+                constitutes acceptance of those changes.
+            </p>
+
+            <h2>Description of Service</h2>
+            <p>
+                Lumen Guard is a screen dimming and blue light filtering application designed to help protect your eyes
+                during extended screen use. The App provides:
+            </p>
+            <ul>
+                <li>Adjustable screen dimming beyond system limits</li>
+                <li>Blue light filter with customizable warmth levels</li>
+                <li>Custom scenes for different use cases</li>
+                <li>Scheduling functionality for automated protection</li>
+                <li>Shake to toggle feature for quick access</li>
+            </ul>
+
+            <h2>Use of Our Service</h2>
+            <p>
+                <strong>License Grant:</strong> Subject to your compliance with these Terms, we grant you a limited,
+                non-exclusive, non-transferable, revocable license to use Lumen Guard for personal, non-commercial purposes.
+            </p>
+            <p><strong>You agree not to:</strong></p>
+            <ul>
+                <li>Modify, reverse engineer, decompile, or disassemble the App</li>
+                <li>Remove, alter, or obscure any proprietary notices on the App</li>
+                <li>Use the App for any illegal or unauthorized purpose</li>
+                <li>Interfere with or disrupt the integrity or performance of the App</li>
+                <li>Attempt to gain unauthorized access to any services or systems</li>
+                <li>Use the App to transmit viruses, malware, or other harmful code</li>
+                <li>Resell, redistribute, or sublicense the App without permission</li>
+            </ul>
+
+            <h2>Permissions and System Access</h2>
+            <p>
+                Lumen Guard requires certain system permissions to function properly:
+            </p>
+            <ul>
+                <li><strong>Draw Over Other Apps:</strong> Required to display the dimming overlay</li>
+                <li><strong>Foreground Service:</strong> Required to maintain continuous protection</li>
+                <li><strong>Internet (Free Version):</strong> Required for displaying advertisements</li>
+            </ul>
+            <p>
+                By granting these permissions, you acknowledge that these are necessary for the App's core functionality
+                and agree to the associated data handling as described in our <a href="privacy.html">Privacy Policy</a>.
+            </p>
+
+            <h2>Free and Premium Versions</h2>
+            <h3>Free Version</h3>
+            <p>
+                The free version of Lumen Guard includes advertisements and has certain feature limitations:
+            </p>
+            <ul>
+                <li>Limited number of custom scenes</li>
+                <li>Limited scheduling options</li>
+                <li>Advertisements displayed within the app</li>
+            </ul>
+
+            <h3>Premium Version</h3>
+            <p>
+                Lumen Guard Premium is available as a one-time purchase and includes:
+            </p>
+            <ul>
+                <li>Ad-free experience</li>
+                <li>Unlimited custom scenes</li>
+                <li>Unlimited schedules</li>
+                <li>Priority support via email</li>
+                <li>All future premium features</li>
+            </ul>
+
+            <h2>Premium Features and Payments</h2>
+            <p>
+                Premium features are available through Google Play's in-app purchase system. By purchasing
+                premium features, you agree to the following:
+            </p>
+            <ul>
+                <li>All purchases are processed through Google Play's payment system</li>
+                <li>Premium is a one-time purchase providing lifetime access</li>
+                <li>Refunds are subject to Google Play's refund policies</li>
+                <li>Premium features are licensed, not sold, and may be revoked for Terms violations</li>
+            </ul>
+
+            <h2>Intellectual Property Rights</h2>
+            <p>
+                All content, features, and functionality of Lumen Guard, including but not limited to text,
+                graphics, logos, icons, images, and software, are the exclusive property of Beans & Brackets
+                and are protected by international copyright, trademark, patent, trade secret, and other
+                intellectual property laws.
+            </p>
+            <p>
+                You may not use our trademarks, service marks, or logos without our prior written consent.
+            </p>
+
+            <h2>Disclaimer of Warranties</h2>
+            <div class="highlight-box">
+                <p>
+                    <strong>Important:</strong> Lumen Guard is provided "AS IS" and "AS AVAILABLE" without warranties
+                    of any kind, either express or implied.
+                </p>
+            </div>
+            <p>This includes but is not limited to:</p>
+            <ul>
+                <li>Warranties of merchantability or fitness for a particular purpose</li>
+                <li>Warranties that the App will be uninterrupted, secure, or error-free</li>
+                <li>Warranties regarding the accuracy, reliability, or completeness of content</li>
+                <li>Warranties that defects will be corrected</li>
+            </ul>
+            <p>
+                <strong>Eye Health Disclaimer:</strong> While Lumen Guard is designed to reduce eye strain, it is not
+                a medical device and should not be considered a substitute for professional eye care. Consult an
+                eye care professional for any vision-related concerns.
+            </p>
+
+            <h2>Limitation of Liability</h2>
+            <p>
+                To the maximum extent permitted by law, Beans & Brackets shall not be liable for any indirect,
+                incidental, special, consequential, or punitive damages, including but not limited to:
+            </p>
+            <ul>
+                <li>Loss of profits, data, use, goodwill, or other intangible losses</li>
+                <li>Damages resulting from unauthorized access to or alteration of your transmissions or data</li>
+                <li>Damages resulting from any conduct or content of third parties</li>
+                <li>Damages related to your use or inability to use the App</li>
+            </ul>
+            <p>
+                Our total liability shall not exceed the amount you paid us in the twelve (12) months preceding
+                the claim, or $100 USD, whichever is less.
+            </p>
+
+            <h2>Indemnification</h2>
+            <p>
+                You agree to indemnify, defend, and hold harmless Beans & Brackets, its officers, directors,
+                employees, contractors, agents, licensors, and suppliers from and against any claims, liabilities,
+                damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees)
+                arising out of or relating to:
+            </p>
+            <ul>
+                <li>Your violation of these Terms</li>
+                <li>Your use or misuse of Lumen Guard</li>
+                <li>Your violation of any rights of another party</li>
+                <li>Your violation of any applicable laws or regulations</li>
+            </ul>
+
+            <h2>Privacy and Data Protection</h2>
+            <p>
+                Your use of Lumen Guard is also governed by our Privacy Policy, which is incorporated into these
+                Terms by reference. Please review our <a href="privacy.html">Privacy Policy</a> to understand how
+                we handle information and data.
+            </p>
+
+            <h2>Third-Party Services</h2>
+            <p>
+                The free version of Lumen Guard displays advertisements through third-party advertising networks.
+                These services are governed by their own terms and privacy policies. We are not responsible for
+                the content, privacy policies, or practices of any third-party advertising services.
+            </p>
+
+            <h2>Termination</h2>
+            <p>
+                We may terminate or suspend your access to Lumen Guard immediately, without prior notice or
+                liability, for any reason, including but not limited to:
+            </p>
+            <ul>
+                <li>Breach of these Terms</li>
+                <li>Violation of applicable laws or regulations</li>
+                <li>Fraudulent, harassing, or abusive behavior</li>
+                <li>At our sole discretion for any other reason</li>
+            </ul>
+            <p>
+                Upon termination, your right to use the App will immediately cease. All provisions of these Terms
+                that by their nature should survive termination shall survive, including ownership provisions,
+                warranty disclaimers, and limitations of liability.
+            </p>
+
+            <h2>Governing Law and Dispute Resolution</h2>
+            <p>
+                These Terms shall be governed by and construed in accordance with the laws of your jurisdiction,
+                without regard to its conflict of law provisions.
+            </p>
+            <p>
+                Any disputes arising out of or relating to these Terms or Lumen Guard shall first be attempted
+                to be resolved through good faith negotiations. If negotiations fail, disputes may be resolved
+                through binding arbitration or in the courts of competent jurisdiction.
+            </p>
+
+            <h2>Changes to These Terms</h2>
+            <p>
+                We reserve the right to modify or replace these Terms at any time at our sole discretion. If a
+                revision is material, we will provide at least 30 days' notice prior to any new terms taking effect.
+                What constitutes a material change will be determined at our sole discretion.
+            </p>
+            <p>
+                By continuing to access or use Lumen Guard after revisions become effective, you agree to be bound
+                by the revised Terms. If you do not agree to the new Terms, you must stop using the App.
+            </p>
+
+            <h2>Severability</h2>
+            <p>
+                If any provision of these Terms is held to be invalid, illegal, or unenforceable, the remaining
+                provisions shall continue in full force and effect. The invalid provision shall be replaced with
+                a valid provision that most closely matches the intent of the original provision.
+            </p>
+
+            <h2>Entire Agreement</h2>
+            <p>
+                These Terms, together with our Privacy Policy and any other legal notices published by us,
+                constitute the entire agreement between you and Beans & Brackets regarding your use of Lumen Guard,
+                and supersede all prior agreements and understandings.
+            </p>
+
+            <div class="contact-box">
+                <h3>Contact Information</h3>
+                <p>If you have any questions, concerns, or comments about these Terms of Service, please contact us:</p>
+                <p style="margin-top: 1rem;">
+                    <strong>Email:</strong> <a href="mailto:beansnbrackets@gmail.com">beansnbrackets@gmail.com</a><br>
+                    <strong>Developer:</strong> Beans & Brackets
+                </p>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 2rem;">
+                <h3 style="color: #38bdf8; margin: 0 0 1rem 0;">Acknowledgment</h3>
+                <p style="margin: 0;">
+                    By using Lumen Guard, you acknowledge that you have read, understood, and agree to be bound
+                    by these Terms of Service.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="support.html">Support</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="mailto:beansnbrackets@gmail.com">Contact</a>
+        </div>
+        <div class="copyright">
+            © 2026 Beans &amp; Brackets. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
+
